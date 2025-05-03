@@ -1,0 +1,101 @@
+local LBLG = Instance.new("ScreenGui", getParent)
+本地LBL = Instance.new("TextLabel "，getParent)
+本地玩家=游戏。玩家。本地玩家
+
+LBLG。Name = "LBLG "
+LBLG。家长=游戏。CoreGui
+LBLG。ZIndexBehavior = Enum。ZIndexBehavior .同胞
+LBLG。启用=真
+LBL。Name = "LBL "
+LBL。Parent = LBLG
+LBL。BackgroundColor3 = Color3.new(1，1，1)
+LBL。BackgroundTransparency = 1
+LBL。BorderColor3 = Color3.new(0，0，0)
+LBL。Position = UDim2.new(0.75，0，0.010，0)
+LBL。Size = UDim2.new(0，133，0，30)
+LBL。Font = Enum。字体. GothamSemibold
+LBL。Text = "TextLabel "
+LBL。TextColor3 = Color3.new(1，1，1)
+LBL。TextScaled = true
+LBL。TextSize = 14
+LBL。TextWrapped = true
+LBL。可见=真
+
+本地FpsLabel = LBL
+本地心跳= game:get service(“run service”)。心跳
+本地最后一次迭代，开始
+本地FrameUpdateTable = { }
+
+本地函数HeartbeatUpdate()
+LastIteration = tick()
+对于Index = #FrameUpdateTable，1，-1 do
+frame update table[Index+1]=(FrameUpdateTable[Index]> = last iteration-1)和frame update table[Index]或nil
+结束
+frame updatetable[1]= last iteration
+local current fps =(tick()-Start > = 1且#FrameUpdateTable)或(# frame updatetable/(tick()-Start))
+current fps = current fps-current fps % 1
+FpsLabel。Text =("北京时间:"..os.date("%H ").."时"..os.date("%M ").."分"..os.date("%S "))
+结束
+Start = tick()
+心跳:连接(心跳更新)
+
+local core GUI = game:get service(" starter GUI ")
+
+core GUI:set core(" send notification " ,{
+Title = "准备脚本",
+Text = "正在加载（反挂机已开启)",
+持续时间= 5，
+})
+打印(“反挂机开启")
+local vu = game:GetService(" VirtualUser ")
+game:get service(" Players ")local player . idled:connect(function()
+vu:Button2Down(Vector2.new(0，0)，工作区。CurrentCamera.CFrame)
+等待(1)
+vu:Button2Up(Vector2.new(0，0)，工作区。CurrentCamera.CFrame)
+结束)
+local Orion lib = loadstring(game:http get(" https://pastebin . com/raw/dUiCrXYP "))()
+local Window = Orion lib:make Window({ Name = "卡卡大蛇脚本"，HidePremium = false，SaveConfig = true，IntroText = "欢迎使用卡卡大蛇脚本"，配置文件夹= "欢迎使用卡卡大蛇脚本"})
+local about = Window:MakeTab({
+Name = "卡卡大蛇脚本",
+icon = " rbxassetid://93566402708060 "，
+PremiumOnly = false
+})
+
+关于:AddParagraph("您的用户名:"," "..游戏。玩家.本地玩家.姓名.."")
+关于:AddParagraph("您的注入器:"," "..标识执行者().."")
+关于:AddParagraph("您当前服务器的ID“，”..游戏。GameId.."")
+
+local Tab = Window:MakeTab({
+Name = "有话说",
+icon = " rbxassetid://93566402708060 "，
+PremiumOnly = false
+})
+
+local Tab = Window:MakeTab({
+Name = "脚本",
+icon = " rbxassetid://93566402708060 "，
+PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "功能"
+})
+
+选项卡:添加按钮({
+Name = "水下世界支持很多游戏_名单已被破除",
+回调=函数()
+loadstring(game:http get((' https://raw . githubusercontent . com/jiankeQWQ/Fish/main/sx '))()
+结束
+})
+
+选项卡:添加按钮({
+Name = "卡卡大蛇",
+回调=函数()
+剑客_V3 = "作者_卡卡 = "本人QQ 2528932281 " loadstring(game:http get((' https://raw . githubusercontent . com/jiankeQWQ/jiankev 3/main/jianke _ V3 '))()
+结束
+})
+
+local Tab = Window:MakeTab({
+Name = "🏀通用功能🏀",
+icon = " rbxassetid://93566402708060 "，
+PremiumOnly = false
